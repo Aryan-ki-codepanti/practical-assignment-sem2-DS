@@ -46,10 +46,14 @@ public:
         }
     }
 
-    bool checkBit(int n, int i)
+    static bool checkBit(int n, int i)
     {
         int mask = 1 << i;
         return (n & mask) != 0;
+    }
+
+    int getSetSize(){
+        return size;
     }
 
     bool isExist(int a)
@@ -87,5 +91,6 @@ int main()
     s.removeDuplicates();
     s.display();
     s.getPowerSet();
+    // cout << Set::checkBit(2,1);
     return 0;
 }
