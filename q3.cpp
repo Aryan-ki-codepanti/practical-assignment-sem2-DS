@@ -95,7 +95,7 @@ public:
                 // Check if i,j = 1 go for j,k to check for 1 then i,k
                 if (arr[i][j])
                 {
-                    for (int k = j; k < n; k++)
+                    for (int k = 0; k < n; k++)
                     {
                         if (arr[j][k] && !arr[i][k])
                             return false;
@@ -121,13 +121,12 @@ int main()
 {
     Relation R(3);
     R.takeInput();
+    cout << "Relation - Adjacency matrix" << endl;
     R.printRelation();
     cout << "Reflexive: " << R.isReflexive() << endl;
     cout << "Symmetric: " << R.isSymmetric() << endl;
     cout << "AntiSymmetric: " << R.isAntiSymmetric() << endl;
     cout << "Transitive: " << R.isTransitive() << endl;
-    cout << "Partially Ordered: " << R.isTransitive() << endl;
-    cout << "Equivalence: " << R.isTransitive() << endl;
 
     return 0;
 }

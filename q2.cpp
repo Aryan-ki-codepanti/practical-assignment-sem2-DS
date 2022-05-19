@@ -29,7 +29,6 @@ public:
 
     void display()
     {
-        cout << "ArraySet -> ";
         for (int i = 0; i < size; i++)
             cout << arr[i] << " ";
         cout << endl;
@@ -161,12 +160,22 @@ int main()
     A.setFromArray(arr1, 5);
     B.setFromArray(arr2, 3);
 
-    // A.cartesianProduct(B);
-    // cout << "----------" << endl;
-    // B.cartesianProduct(A);
-    // A.symmetricDifference(B);
-    // A.setUnion(B);
-    // A.setIntersection(B);
+    cout << "A -> ";
+    A.display();
+    cout << "B -> ";
+    B.display();
+
+    cout << "A subset of B: " << A.isSubset(B) << endl;
+    cout << "A union B : ";
+    A.setUnion(B);
+    cout << "A intersection B : ";
+    A.setIntersection(B);
+    cout << "Difference : ";
+    A.difference(B);
+    cout << "Symmetric Difference : ";
+    A.symmetricDifference(B);
+    cout << "Cartesian Product" << endl;
+    A.cartesianProduct(B);
 
     return 0;
 }
