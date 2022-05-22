@@ -79,7 +79,7 @@ public:
         {
             for (int j = i + 1; j < n; j++)
             {
-                if (arr[i][j] == arr[j][i] && arr[i][j]) // ignore where arr[i,j] = arr[j,i] = 0
+                if (arr[j][i] && arr[i][j]) 
                     return false;
             }
         }
