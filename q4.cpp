@@ -17,7 +17,6 @@ public:
 
     void takeInput()
     {
-        cout << "Enter Matrix elements" << endl;
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < n; j++)
@@ -119,12 +118,15 @@ public:
 
 int main()
 {
-    Relation R(3);
+    int size = 3;
+    Relation R(size);
+    cout << "Enter the relation's " << size << " X " << size << " matrix" << endl;
     R.takeInput();
     cout << "Relation - Adjacency matrix" << endl;
     R.printRelation();
     cout << "Partially Ordered: " << R.isPartiallyOrdered() << endl;
     cout << "Equivalence: " << R.isEquivalence() << endl;
+    cout << "None of them: " << !(R.isEquivalence() || R.isPartiallyOrdered()) << endl;
 
     return 0;
 }

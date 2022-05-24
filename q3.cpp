@@ -17,7 +17,6 @@ public:
 
     void takeInput()
     {
-        cout << "Enter Matrix elements" << endl;
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < n; j++)
@@ -79,7 +78,7 @@ public:
         {
             for (int j = i + 1; j < n; j++)
             {
-                if (arr[j][i] && arr[i][j]) 
+                if (arr[j][i] && arr[i][j])
                     return false;
             }
         }
@@ -119,7 +118,9 @@ public:
 
 int main()
 {
-    Relation R(3);
+    int size = 3;
+    Relation R(size);
+    cout << "Enter the relation's " << size << " X " << size << " matrix" << endl;
     R.takeInput();
     cout << "Relation - Adjacency matrix" << endl;
     R.printRelation();
