@@ -51,9 +51,14 @@ public:
 
 int main()
 {
-    Graph G(4);
+    int size = 3;
+    Graph G(size);
+    cout << "Enter graph matrix" << endl;
     G.inputGraph();
-    cout << G.indegree(1) << endl;
-    cout << G.outdegree(1) << endl;
+
+    int vertex = 1;
+
+    cout << "Indegree of vertex " << vertex << " : " << G.indegree(vertex) << endl;
+    cout << "Outdegree of vertex " << vertex << " : " << G.outdegree(vertex) << endl;
     return 0;
 }

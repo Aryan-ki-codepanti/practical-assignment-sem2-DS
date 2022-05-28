@@ -34,7 +34,6 @@ public:
                     return false;
                 else if (i != j && (!arr[i][j] || !arr[j][i]))
                     return false;
-                
             }
         }
         return true;
@@ -43,8 +42,13 @@ public:
 
 int main()
 {
-    Graph G(3);
+    int size = 3;
+    Graph G(size);
+    cout << "Enter the graph matrix" << endl;
     G.inputGraph();
-    cout << G.isComplete() << endl;
+    if (G.isComplete())
+        cout << "Graph is complete" << endl;
+    else
+        cout << "Graph is complete" << endl;
     return 0;
 }
