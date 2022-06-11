@@ -51,6 +51,18 @@ public:
             visited[v][u] = 1;
         }
 
+        // check for any unvisited edges which were present in graph but were not visited
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = i + 1; j < n; j++)
+            {
+                bool isEdge = arr[i][j] && arr[j][i];
+                bool isVisited = visited[i][j] && visited[j][i];
+                if (isEdge && !isVisited)
+                    return false;
+            }
+        }
+
         return true;
     }
 
@@ -65,7 +77,7 @@ int main()
     Graph G(4);
     G.inputGraph();
 
-    int path[] = {1, 0, 2, 3, 1, 2};
+    int path[] = {1, 0, 2, 3, 1,2};
     int s = sizeof(path) / sizeof(path[0]);
     cout << G.isEulerPath(path, s) << endl;
     return 0;
