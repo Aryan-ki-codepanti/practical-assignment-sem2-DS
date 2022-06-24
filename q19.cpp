@@ -46,7 +46,7 @@ public:
             else if (visited[u][v])
                 return false;
 
-            // visit/marks the undirected edges b/w u and v
+            // visit/mark the undirected edge b/w u and v
             visited[u][v] = 1;
             visited[v][u] = 1;
         }
