@@ -33,7 +33,7 @@ public:
             return;
         }
 
-        for (int i = 0; i < C; i++)
+        for (int i = 0; i <= C; i++)
         {
             arr[xIdx] = i;
             C -= i;
