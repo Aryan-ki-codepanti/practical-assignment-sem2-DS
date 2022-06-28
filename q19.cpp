@@ -75,11 +75,13 @@ public:
 int main()
 {
     Graph G(4);
+    cout << "Enter graph" << endl;
     G.inputGraph();
 
-    int path[] = {1, 0, 2, 3, 1,2};
+    int path[] = {1, 0, 2, 3, 1, 2};
     int s = sizeof(path) / sizeof(path[0]);
-    cout << G.isEulerPath(path, s) << endl;
+    cout << "Euler path : " << G.isEulerPath(path, s) << endl;
+    cout << "Euler circuit : " << G.isEulerCircuit(path, s) << endl;
     return 0;
 }
 
