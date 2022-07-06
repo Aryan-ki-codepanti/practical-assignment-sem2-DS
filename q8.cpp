@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+#include <fstream>
 using namespace std;
 
 class Array
@@ -68,6 +69,7 @@ public:
 int main()
 {
 
+    ofstream out("q8.csv");
     srand((unsigned)time(NULL));
     int n, a, b;
     n = 10;
@@ -87,7 +89,9 @@ int main()
         // cout << "Sorted : ";
         // arr.display();
         cout << "n : " << i << " Comparisons : " << comparisons << endl;
+        out << i << "," << comparisons << endl;
     }
+    out.close();
 
     return 0;
 }
