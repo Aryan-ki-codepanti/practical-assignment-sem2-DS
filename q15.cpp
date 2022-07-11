@@ -22,26 +22,31 @@ public:
 
     void display()
     {
-        for (int d = degree; d >= 0; d--)
-            cout << coefficients[d] << " ";
-        cout << endl;
+        for (int d = degree; d > 0; d--)
+            cout << coefficients[d] << "x^" << d << " + ";
+        cout << coefficients[0] << "x^0" << endl;
     }
     int f(int n)
     {
         int res = 0;
         for (int d = degree; d >= 0; d--)
-            res += (coefficients[d] * (int)(pow(n, d)));
-
+            res += coefficients[d] * pow(n, d);
         return res;
     }
 };
 
 int main()
 {
-    int n = 2;
+    int n,m;
+    cout << "Enter degree of polynomial : ";
+    cin >> n;
     Polynomial p(n);
+    cout << "Enter coefficients of polynomial" << endl;
     p.inputCoefficients();
+    cout << "Polynomial : ";
     p.display();
-    cout << p.f(5);
+    cout << "Enter a number : ";
+    cin >> m;
+    cout << "Value at " << m << " : " << p.f(m);
     return 0;
 }

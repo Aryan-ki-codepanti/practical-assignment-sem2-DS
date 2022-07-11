@@ -82,12 +82,7 @@ int main()
     {
         arr = Array(i, a, b);
         arr.setArray();
-        // cout << "Original : ";
-        // arr.display();
-
         comparisons = arr.bubbleSort();
-        // cout << "Sorted : ";
-        // arr.display();
         cout << "n : " << i << " Comparisons : " << comparisons << endl;
         out << i << "," << comparisons << endl;
     }
